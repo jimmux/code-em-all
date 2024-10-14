@@ -1,0 +1,24 @@
+{
+  "name": "Code 'Em All",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "features": {
+    // Additional to universal inclusions, from https://containers.dev/features
+    "ghcr.io/warrenbuckley/codespace-features/sqlite:latest": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.jupyter",
+        "ms-toolsai.jupyter-renderers",
+        "ms-python.vscode-pylance",
+        "ms-python.python",
+        "ms-python.debugpy",
+        "svelte.svelte-vscode"
+      ]
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/scripts/post-create.sh"
+}

@@ -1,0 +1,5 @@
+user_id,username,email,password,bio,join_date
+0,dabeer,dabeer@example.com,password123,"Student of Computer Science",2001/01/31
+1,jane_doe,janedoe@example.com,password456,"Aspiring Web Developer.",2008/08/08
+2,mikeross,mikeross@example.com,password789,"Loves coding and playing football.",2011/11/03
+3,alice_bob,alicebob@example.com,password000,"A passionate learner.",2024/07/04

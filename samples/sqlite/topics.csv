@@ -1,0 +1,6 @@
+topic_id,user_id,category_id,title,description,created_at
+0,1,1,"Introduction to Database Systems","This topic will discuss the basics of database systems.",2020/01/01
+1,2,2,"New programming language in town","Discussion on the newly released programming language ZenCode.",2020/01/03
+2,3,3,"Physics questions for upcoming exam","Need help with physics concepts? Let's discuss.",2020/03/11
+3,4,4,"Book Recommendations: Latest Best Sellers","Share your favorite book recommendations.",2020/03/19
+4,1,5,"Upcoming Football Tournament","Discussion about the upcoming football tournament.",2021/09/01
