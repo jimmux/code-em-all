@@ -4,7 +4,7 @@ My personalised go-to dev container, that I can spin up whenever I need to just 
 
 Basing on the GitHub [universal image](https://github.com/devcontainers/images/tree/main/src/universal).
 
-It should minimally support:
+Currently supported:
 
 - Node
   - Typescript
@@ -14,23 +14,22 @@ It should minimally support:
 - Java
   - Gradle
 - SQLite
+- PureScript
+- Elm
+- Gleam
 
 Extras to add over time:
 
 - Maybe Yarn, Bun, and/or Deno
-- Elm
-- PureScript
 - Godot
   - "Godots" app mostly takes care of this
   - Might be useful for F# and other alternative experiments
 - Haskell
 - Postgres
 
-Everything at least current LTS versions, if not latest stable version.
+Prefer everything at least current LTS versions, if not latest stable version.
 
-Prioritise using [features](https://containers.dev/features) where available.
-
-Make it friendly with VSCode Dev Containers, and (BoxBuddy or DevPod). I want to use this in Aurora atomic Linux, a host environment that requires minimal preparation.
+Keep it friendly with VSCode Dev Containers, and (BoxBuddy or DevPod). I use this in Aurora atomic Linux, a host environment that requires minimal preparation.
 
 Fedora base would have been preferred, for consistency with the host, but many dev container features aren't compatible.
 
@@ -96,7 +95,7 @@ sqlite> select username, content
 ## To do
 
 - Add more VSCode extensions and any required port configs to `devcontainer.json`
-- Install any additional languages and/or frameworks via `Dockerfile` and/or `postCreateCommand`
+- Install any additional languages and/or frameworks via `devcontainer.json` features, `Dockerfile` and/or `postCreateCommand`
 - Move threlte example to its own repo, and make it a subrepo of this, so it can have a built version online for viewing
 - Use the tests that come with the universal image?
 - Shell customisations, and other `.bashrc` tweaks
@@ -104,3 +103,4 @@ sqlite> select username, content
 - Add CI to actually run some of these verifications
 - Move some of my additions to features
 - [Badge](https://code.visualstudio.com/docs/devcontainers/create-dev-container#_add-an-open-in-dev-container-badge)
+- More samples for available languages/frameworks

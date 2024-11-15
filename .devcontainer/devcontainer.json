@@ -6,19 +6,30 @@
   },
   "features": {
     // Additional to universal inclusions, from https://containers.dev/features
-    "ghcr.io/warrenbuckley/codespace-features/sqlite:latest": {}
+    "ghcr.io/devcontainers-extra/features/exercism-cli:latest": {},
+    "ghcr.io/warrenbuckley/codespace-features/sqlite:latest": {},
+    "ghcr.io/devcontainers-extra/features/elm-asdf:2": {},
+    "ghcr.io/devcontainers-extra/features/gleam:latest": {}
   },
   "customizations": {
     "vscode": {
       "extensions": [
+        // General
+        "streetsidesoftware.code-spell-checker",
+        "exercism.exercism-cli",
+        // Python
         "ms-toolsai.jupyter",
         "ms-toolsai.jupyter-renderers",
         "ms-python.vscode-pylance",
         "ms-python.python",
         "ms-python.debugpy",
-        "svelte.svelte-vscode"
+        // Svelte
+        "svelte.svelte-vscode",
+        // Java
+        "vscjava.vscode-gradle",
+        // Gleam
+        "Gleam.gleam"
       ]
     }
-  },
-  "postCreateCommand": "bash .devcontainer/scripts/post-create.sh"
+  }
 }
