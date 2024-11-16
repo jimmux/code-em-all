@@ -24,14 +24,15 @@ Extras to add over time:
 - Godot
   - "Godots" app mostly takes care of this
   - Might be useful for F# and other alternative experiments
-- Haskell
 - Postgres
 
-Prefer everything at least current LTS versions, if not latest stable version.
+Prefer everything at least current LTS versions by default, if not latest stable version.
 
-Keep it friendly with VSCode Dev Containers, and (BoxBuddy or DevPod). I use this in Aurora atomic Linux, a host environment that requires minimal preparation.
+Also installed asdf to manage local versions where required, but not used.
 
-Fedora base would have been preferred, for consistency with the host, but many dev container features aren't compatible.
+Using HomeBrew for most global installs, due to it just working more reliably for many packages.
+
+JupyterLab doesn't work well in HomeBrew for Linux, so it's installed via apt/pip.
 
 ## Samples
 
@@ -94,13 +95,10 @@ sqlite> select username, content
 
 ## To do
 
-- Add more VSCode extensions and any required port configs to `devcontainer.json`
-- Install any additional languages and/or frameworks via `devcontainer.json` features, `Dockerfile` and/or `postCreateCommand`
+- Add more VSCode extensions to `devcontainer.json`
 - Move threlte example to its own repo, and make it a subrepo of this, so it can have a built version online for viewing
-- Use the tests that come with the universal image?
 - Shell customisations, and other `.bashrc` tweaks
-- Add more vscode extensions
 - Add CI to actually run some of these verifications
-- Move some of my additions to features
 - [Badge](https://code.visualstudio.com/docs/devcontainers/create-dev-container#_add-an-open-in-dev-container-badge)
 - More samples for available languages/frameworks
+- Lots of lessons learned doing this - I should do a writeup in this README

@@ -1,22 +1,29 @@
-# Safest sandbox available seems to be:
-#   https://github.com/devcontainers/images/tree/main/src/universal
-#   Already includes Python, Node, Java, and more
-FROM mcr.microsoft.com/devcontainers/universal:linux
+# HomeBrew is surprisingly the most reliable package manager on images, 
+#   but slow to install. Use the well maintained official image
+FROM homebrew/brew
 
-# Installations not covered by features
+RUN sudo apt-get update; brew update
 
-RUN apt-get update && apt-get install -y \
-  # Haskell
-  ghc
-  
-RUN npm install -g \
-  # TS
-  typescript \
-  # PureScript
-  purescript spago
+# Split up HomeBrew installs due to hitting the open file limit
+# General utilities
+RUN brew install \
+    # Not great for global installs, useful for local
+    asdf \
+    exercism
+# Languages and runtimes
+RUN brew install \
+    nodejs \
+    purescript spago \
+    typescript \
+    java \
+    elm \
+    ghc haskell-stack
+# Gleam depends on Erlang, which pulls in a lot
+RUN brew install gleam
+# Database
+RUN brew install \
+    sqlite
 
-# Add any shell customisations
-
-# Set up samples
-
-# Run verification
+# JupyterLab is not available in HomeBrew for Linux, so use good old apt/pip
+RUN sudo apt-get install -y python3 pip \
+    && pip install jupyterlab

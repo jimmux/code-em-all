@@ -1,15 +1,7 @@
 {
   "name": "Code 'Em All",
   "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
-  },
-  "features": {
-    // Additional to universal inclusions, from https://containers.dev/features
-    "ghcr.io/devcontainers-extra/features/exercism-cli:latest": {},
-    "ghcr.io/warrenbuckley/codespace-features/sqlite:latest": {},
-    "ghcr.io/devcontainers-extra/features/elm-asdf:2": {},
-    "ghcr.io/devcontainers-extra/features/gleam:latest": {}
+    "dockerfile": "Dockerfile"
   },
   "customizations": {
     "vscode": {
